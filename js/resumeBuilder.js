@@ -12,11 +12,11 @@ This is empty on purpose! Your code to build the resume will go here.
         "twitter": "string (optional)",
         "location": "Montserrat, Buenos Aires"
     },
- 	"welcomeMessage" : "Keep it simple",
+ 	"welcomeMessage" : "Divide and conquer",
  	"skills" : [
- 		"proactive", "methodic", "keep it simple"
+ 		"proactive", "methodic", "organized", "autodidact"
  	],
- 	"biopic" : "images/face.jpeg",
+ 	"biopic" : "images/dvader.jpg",
  	/*"display" : func(),*/
  };
 
@@ -26,7 +26,7 @@ $("#header").prepend(HTMLheaderRole.replace("%data%", bio.role));
 $("#header").prepend(formattedName);
 /*for (i=0; i=3; i++){*/
 
-$("#topContacts, #footerContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
+//$("#topContacts, #footerContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
 $("#topContacts, #footerContacts").append(HTMLemail.replace("%data%", bio.contacts.email));
 $("#topContacts, #footerContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
 
@@ -42,19 +42,33 @@ for (i=0; i<bio.skills.length; i++){
 
 var work = {
 	"jobs" : [
-		{
+    {
+        "employer": "Francisco J. Abello y Asociados, S.A.",
+            "title": "Asistente de Proyectos de Ingeniería",
+            "location": "Montserrat, Buenos Aires, Argentina",
+            "dates": "enero 2019 - actualmente",
+            "description": "Dimensionamiento de instalaciones sanitarias industriales (agua frica y caliente, sistema de recolección cloacal y pluvial), instalaciones termomecánicas y contra incendio."
+    },
+    {
+        "employer": "Alvear Icon Hotel",
+            "title": "Medio Oficial de Mantenimiento",
+            "location": "Puerto Madero, Buenos Aires, Argentina",
+            "dates": "febrero 2018 - diciembre 2018",
+            "description": "Inspección de instalaciones, calderas, enfriadores de agua, intercambiadores, cámaras de frío, heladeras, torres de enfriamiento, tanques y bombas. Atención y resolución de reclamos en habitaciones de lujo."
+    },
+    {
 	    	"employer": "Laboratorios Leti, S.A.V",
             "title": "Project Engineer",
             "location": "Guarenas, Venezuela",
-            "dates": "july 2013 - july 2017",
-            "description": "Drawing plans and leading construction of new pharmaceutical areas incluiding services installations"
+            "dates": "julio 2013 - julio 2017",
+            "description": "Seguimiento y control de proyectos, construcción de nuevas áreas de producción y empaque"
 		},
 		{
-			"employer": "Avilaire Aire Acondicionado, C.A.", 
+			"employer": "Avilaire Aire Acondicionado, C.A.",
             "title": "Service Engineer",
             "location": "Caracas, Venezuela",
-            "dates": "january 2013 - juny 2013",
-            "description": "Leading technical maintenance, installations and services to customers"
+            "dates": "enero 2013 - junio 2013",
+            "description": "Lider de proyectos de instalación y coordinador de servicios y atención al cliente"
 		}
 	]
 }
@@ -108,6 +122,26 @@ var education = {
     }]
 }
 
+var displayedu = function(){
+	for (course in education.onlineCourses){
+		$("#education").append(HTMLschoolStart);
+
+		var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
+		var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title);
+		var formattedOnlineSchoolTitle = formattedOnlineSchool + formattedOnlineTitle;
+		$(".work-entry:last").append(formattedOnlineSchoolTitle);
+
+		var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[course].dates);
+		//var formattedWlocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
+		//var formattedWdescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+		//$(".work-entry:last").append(formattedWlocation);
+		$(".work-entry:last").append(formattedOnlineDates);
+		//$(".work-entry:last").append(formattedWdescription);
+	}
+}
+
+
+displayedu();
 var projects = [
 	{
 		"title": "a1",
@@ -130,10 +164,10 @@ projects.display = function(){
 
 		var title = HTMLprojectTitle.replace("%data%", projects[proj].title);
 		var dates = HTMLprojectDates.replace("%data%", projects[proj].dates);
-		
+
 		var description = HTMLprojectDescription.replace("%data%", projects[proj].description);
 		var images = HTMLprojectImage.replace("%data%", projects[proj].images);
-		
+
 		$(".project-entry:last").append(title);
 		$(".project-entry:last").append(dates);
 		$(".project-entry:last").append(description);
@@ -144,4 +178,4 @@ projects.display = function(){
 //projects.display();
 
 
-$("#mapDiv").append(googleMap);
+//$("#mapDiv").append(googleMap);
