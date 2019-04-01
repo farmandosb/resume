@@ -16,7 +16,7 @@ This is empty on purpose! Your code to build the resume will go here.
  	"skills" : [
  		"proactive", "methodic", "organized", "autodidact"
  	],
- 	"biopic" : "images/dvader.jpg",
+ 	"biopic" : "/resume/blob/master/images/dvader.jpg",
  	/*"display" : func(),*/
  };
 
