@@ -16,7 +16,7 @@ This is empty on purpose! Your code to build the resume will go here.
  	"skills" : [
  		"proactive", "methodic", "organized", "autodidact"
  	],
- 	"biopic" : "C:/Users/freddy/Documents/Freddy/Programming/Resume/images/dvader.jpg",
+ 	"biopic" : "/images/dvader.jpg",
  	/*"display" : func(),*/
  };
 
