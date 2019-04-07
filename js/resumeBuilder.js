@@ -16,7 +16,7 @@ This is empty on purpose! Your code to build the resume will go here.
  	"skills" : [
  		"proactive", "methodic", "organized", "autodidact"
  	],
- 	"biopic" : "images/dvader.jpg",
+ 	"biopic" : "C:/Users/freddy/Documents/Freddy/Programming/Resume/images/dvader.jpg",
  	/*"display" : func(),*/
  };
 
@@ -27,7 +27,7 @@ $("#header").prepend(formattedName);
 /*for (i=0; i=3; i++){*/
 
 //$("#topContacts, #footerContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
-$("#topContacts, #footerContacts").append(HTMLemail.replace("%data%", bio.contacts.email));
+//$("#topContacts, #footerContacts").append(HTMLemail.replace("%data%", bio.contacts.email));
 $("#topContacts, #footerContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
 
 //$("#topContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
@@ -54,7 +54,7 @@ var work = {
             "title": "Medio Oficial de Mantenimiento",
             "location": "Puerto Madero, Buenos Aires, Argentina",
             "dates": "febrero 2018 - diciembre 2018",
-            "description": "Inspección de instalaciones, calderas, enfriadores de agua, intercambiadores, cámaras de frío, heladeras, torres de enfriamiento, tanques y bombas. Atención y resolución de reclamos en habitaciones de lujo."
+            "description": "Inspección de instalaciones generales. Resolución de reclamos en habitaciones."
     },
     {
 	    	"employer": "Laboratorios Leti, S.A.V",
@@ -123,25 +123,37 @@ var education = {
 }
 
 var displayedu = function(){
-	for (course in education.onlineCourses){
-		$("#education").append(HTMLschoolStart);
+  $("#education").append(HTMLschoolStart);
+  for (course in education.schools){
 
+
+		var formattedSchoolName= HTMLschoolName.replace("%data%", education.schools[course].name);
+		var formattedSchoolDegree = HTMLschoolDegree.replace("%data%", education.schools[course].degree);
+		var formattedSchoolDates = HTMLschoolDates.replace("%data%", education.schools[course].dates);
+		$(".education-entry:last").append(formattedSchoolName);
+    $(".education-entry:last").append(formattedSchoolDegree);
+    $(".education-entry:last").append(formattedSchoolDates);
+	}
+
+
+$(".education-entry:last").append(HTMLonlineClasses);
+
+  for (course in education.onlineCourses){
 		var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
 		var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title);
-		var formattedOnlineSchoolTitle = formattedOnlineSchool + formattedOnlineTitle;
-		$(".work-entry:last").append(formattedOnlineSchoolTitle);
+		var formattedOnlineSchoolTitle = formattedOnlineTitle + formattedOnlineSchool;
+		$(".education-entry:last").append(formattedOnlineSchoolTitle);
 
 		var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[course].dates);
 		//var formattedWlocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
 		//var formattedWdescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
 		//$(".work-entry:last").append(formattedWlocation);
-		$(".work-entry:last").append(formattedOnlineDates);
+		$(".education-entry:last").append(formattedOnlineDates);
 		//$(".work-entry:last").append(formattedWdescription);
 	}
 }
-
-
 displayedu();
+
 var projects = [
 	{
 		"title": "a1",
