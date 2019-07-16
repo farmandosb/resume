@@ -3,20 +3,20 @@ This is empty on purpose! Your code to build the resume will go here.
  */
 
  var bio = {
- 	"name" : "Freddy Suárez",
+ 	"name" : "Freddy Suarez",
  	"role" : "Mechanical Engineer, Frontend Developer",
  	"contacts" : {
- 		"mobile": "+54-911-2671-7400",
-        "email": "freddy.armando.suarez@gmail.com" ,
+ 	
+        //"email": "freddy.armando.suarez@gmail.com" ,
         "github": "farmandosb",
-        "twitter": "string (optional)",
-        "location": "Montserrat, Buenos Aires"
+        //"twitter": "string (optional)",
+        "location": "Buenos Aires"
     },
  	"welcomeMessage" : "Divide and conquer",
  	"skills" : [
  		"proactive", "methodic", "organized", "autodidact"
  	],
- 	"biopic" : "https://raw.githubusercontent.com/farmandosb/resume/master/images/dvader.jpg",
+ 	"biopic" : "https://raw.githubusercontent.com/farmandosb/resume/master/images/face.jpg",
  	/*"display" : func(),*/
  };
 
@@ -44,41 +44,41 @@ var work = {
 	"jobs" : [
     {
         "employer": "Francisco J. Abello y Asociados, S.A.",
-            "title": "Asistente de Proyectos de Ingeniería",
-            "location": "Montserrat, Buenos Aires, Argentina",
+            "title": "Ingeniero de Proyectos",
+            "location": "Buenos Aires, Argentina",
             "dates": "enero 2019 - actualmente",
-            "description": "Dimensionamiento de instalaciones sanitarias industriales (agua frica y caliente, sistema de recolección cloacal y pluvial), instalaciones termomecánicas y contra incendio."
+            "description": "Dimensionamiento de instalaciones sanitarias industriales"
     },
-    {
-        "employer": "Alvear Icon Hotel",
-            "title": "Medio Oficial de Mantenimiento",
-            "location": "Puerto Madero, Buenos Aires, Argentina",
-            "dates": "febrero 2018 - diciembre 2018",
-            "description": "Inspección de instalaciones generales. Resolución de reclamos en habitaciones."
-    },
+    
+     
+           
+
+
+
+
     {
 	    	"employer": "Laboratorios Leti, S.A.V",
             "title": "Project Engineer",
             "location": "Guarenas, Venezuela",
             "dates": "julio 2013 - julio 2017",
             "description": "Seguimiento y control de proyectos, construcción de nuevas áreas de producción y empaque"
-		},
-		{
-			"employer": "Avilaire Aire Acondicionado, C.A.",
-            "title": "Service Engineer",
-            "location": "Caracas, Venezuela",
-            "dates": "enero 2013 - junio 2013",
-            "description": "Lider de proyectos de instalación y coordinador de servicios y atención al cliente"
 		}
-	]
-}
+		
+			
+
+
+
+   
+		
+	
+};
 
 var displaywork = function(){
-	for (job in work.jobs){
-		$("#workExperience").append(HTMLworkStart);
+	for (job in.jobs){
+		$("#worExperience").append(HTMLworkStart);
 
 		var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-		var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+		var forattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
 		var formattedEmployerTitle = formattedEmployer + formattedTitle;
 		$(".work-entry:last").append(formattedEmployerTitle);
 
@@ -190,4 +190,4 @@ projects.display = function(){
 //projects.display();
 
 
-//$("#mapDiv").append(googleMap);
+$("#mapDiv").append(googleMap);
