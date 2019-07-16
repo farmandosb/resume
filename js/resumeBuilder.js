@@ -4,7 +4,7 @@ This is empty on purpose! Your code to build the resume will go here.
 
  var bio = {
  	"name" : "Freddy Suarez",
- 	"role" : "Mechanical Engineer, Frontend Developer",
+ 	"role" : "Java Developer, Mechanical Engineer",
  	"contacts" : {
  	
         //"email": "" ,
@@ -47,7 +47,7 @@ var work = {
             "title": "Ingeniero de Proyectos",
             "location": "Buenos Aires, Argentina",
             "dates": "enero 2019 - actualmente",
-            "description": "Dimensionamiento de instalaciones sanitarias industriales"
+            "description": "Design of mechanical systems. Autocad, Revit."
     },      
 
     {
@@ -57,7 +57,7 @@ var work = {
             "dates": "julio 2013 - julio 2017",
             "description": "Seguimiento y control de proyectos, construcción de nuevas áreas de producción y empaque."
     }
-	]
+	]}
 
 var displaywork = function(){
 	for (job in.jobs){
@@ -90,7 +90,14 @@ var inName = function(splitName){
 
 var education = {
 	"schools": [
-	{
+		{
+		"name":"Universidad Central de Venezuela",
+		"location" : "Caracas",
+		"degree": "Mechanical Engineer",
+        "majors": "",
+        "dates": "julio 2019 - Actual",
+        "url": "https://www.educacionit.com/"},
+		{
 		"name":"Universidad Central de Venezuela",
 		"location" : "Caracas",
 		"degree": "Mechanical Engineer",
