@@ -7,7 +7,7 @@ This is empty on purpose! Your code to build the resume will go here.
  	"role" : "Mechanical Engineer, Frontend Developer",
  	"contacts" : {
  	
-        //"email": "freddy.armando.suarez@gmail.com" ,
+        //"email": "" ,
         "github": "farmandosb",
         //"twitter": "string (optional)",
         "location": "Buenos Aires"
@@ -43,35 +43,21 @@ for (i=0; i<bio.skills.length; i++){
 var work = {
 	"jobs" : [
     {
-        "employer": "Francisco J. Abello y Asociados, S.A.",
+            "employer": "Francisco J. Abello y Asociados, S.A.",
             "title": "Ingeniero de Proyectos",
             "location": "Buenos Aires, Argentina",
             "dates": "enero 2019 - actualmente",
             "description": "Dimensionamiento de instalaciones sanitarias industriales"
-    },
-    
-     
-           
-
-
-
+    },      
 
     {
-	    	"employer": "Laboratorios Leti, S.A.V",
+	    "employer": "Laboratorios Leti, S.A.V",
             "title": "Project Engineer",
             "location": "Guarenas, Venezuela",
             "dates": "julio 2013 - julio 2017",
-            "description": "Seguimiento y control de proyectos, construcción de nuevas áreas de producción y empaque"
-		}
-		
-			
-
-
-
-   
-		
-	
-};
+            "description": "Seguimiento y control de proyectos, construcción de nuevas áreas de producción y empaque."
+    }
+	]
 
 var displaywork = function(){
 	for (job in.jobs){
