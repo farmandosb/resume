@@ -2,23 +2,25 @@
 This is empty on purpose! Your code to build the resume will go here.
  */
 
- var bio = {
- 	"name" : "Freddy Suarez",
- 	"role" : "Java Developer, Mechanical Engineer",
- 	"contacts" : {
- 	
-        //"email": "" ,
-        "github": "farmandosb",
-        //"twitter": "string (optional)",
-        "location": "Buenos Aires"
-    },
- 	"welcomeMessage" : "Divide and conquer",
- 	"skills" : [
- 		"proactive", "methodic", "organized", "autodidact"
- 	],
- 	"biopic" : "https://raw.githubusercontent.com/farmandosb/resume/master/images/face.jpg",
- 	/*"display" : func(),*/
- };
+   var bio = {
+   	"name" : "Freddy Suarez",
+   	"role" : "Java Developer, Mechanical Engineer",
+   	"contacts" : {
+
+          "email": "" ,
+          "github": "farmandosb",
+          "twitter": "",
+          "location": "Buenos Aires"
+      },
+   	"welcomeMessage" : "Divide and conquer",
+   	"skills" : [
+   		"proactive", "methodic", "organized", "autodidact"
+   	],
+   	"biopic" : "/images/face.jpg"
+
+   }
+
+ /*"display" : func(),*/
 
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
 
@@ -44,27 +46,27 @@ var work = {
 	"jobs" : [
     {
             "employer": "Francisco J. Abello y Asociados, S.A.",
-            "title": "Ingeniero de Proyectos",
+            "title": "Projects Engineer",
             "location": "Buenos Aires, Argentina",
-            "dates": "enero 2019 - actualmente",
+            "dates": "enero 2019 - now",
             "description": "Design of mechanical systems. Autocad, Revit."
-    },      
+    },
 
     {
 	    "employer": "Laboratorios Leti, S.A.V",
             "title": "Project Engineer",
             "location": "Guarenas, Venezuela",
             "dates": "julio 2013 - julio 2017",
-            "description": "Seguimiento y control de proyectos, construcción de nuevas áreas de producción y empaque."
+            "description": "Leading  construction of new production's areas"
     }
 	]}
 
 var displaywork = function(){
-	for (job in.jobs){
-		$("#worExperience").append(HTMLworkStart);
+	for (job in work.jobs){
+		$("#workExperience").append(HTMLworkStart);
 
 		var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-		var forattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+		var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
 		var formattedEmployerTitle = formattedEmployer + formattedTitle;
 		$(".work-entry:last").append(formattedEmployerTitle);
 
@@ -159,7 +161,7 @@ var projects = [
 		"dates": "b2",
 		"description": "b3",
 		"images": "images/197x148.gif"
-	}];
+	}]
 
 
 
