@@ -93,9 +93,9 @@ var inName = function(splitName){
 var education = {
 	"schools": [
 		{
-		"name":"Universidad Central de Venezuela",
-		"location" : "Caracas",
-		"degree": "Mechanical Engineer",
+		"name":"Educacion IT",
+		"location" : "Buenos Aires",
+		"degree": "Java Developer Engineer",
         "majors": "",
         "dates": "julio 2019 - Actual",
         "url": "https://www.educacionit.com/"},
