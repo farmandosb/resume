@@ -16,7 +16,7 @@ This is empty on purpose! Your code to build the resume will go here.
    	"skills" : [
    		"proactive", "methodic", "organized", "autodidact"
    	],
-   	"biopic" : "/images/face.jpg"
+   	"biopic" : "https://github.com/farmandosb/resume/blob/master/images/face.jpeg?raw=true"
 
    }
 
