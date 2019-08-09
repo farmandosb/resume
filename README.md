@@ -15,6 +15,5 @@ Files in the repository:
 * **css/style.css**: I have made few changes into to original style of the project.
 
 ### Watch the final result:
-Just click to check [my resume](https://farmandosb.github.io/resume/)!
-
+Just click to check [my resume v1.0](https://farmandosb.github.io/resume/)!
 
